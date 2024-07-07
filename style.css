@@ -5,7 +5,7 @@ html {
   background-color: #363634;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,13 +57,13 @@ body{
   box-shadow: 0 6px 0 rgb(5, 5, 5);
   margin-bottom: 6px;
 }
-.modebtn:hover {
+.modeBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 0 rgb(5, 5, 5);
   background: #2b2a29;
   cursor: pointer;
 }
-.modebtn:active {
+.modeBtn:active {
   transform: translateY(2px);
   box-shadow: 0 4px 0 rgb(5, 5, 5);
   background: #faf5e9;
