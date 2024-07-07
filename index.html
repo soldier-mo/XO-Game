@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>xo Game</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nerko+One&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-        <link rel="stylesheet" href="XO.css" />
-    </head>
-    <body>
-        <!-- start -->
-        <div class="selction-box" id="startScreen">
-            <header>Tic Tac Toe</header>
-            <div class="titleOfStart">Game mode?</div>
-            <div class="option">
-                <button class="modebtn" id="mode0" onclick="start(this.id, 0)">Tow player</button>
-                <button class="modebtn" id="mode1" onclick="start(this.id, 1)">vs. CPU</button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>xo Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- start -->
+    <div class="selection-box" id="startScreen">
+      <header>Tic Tac Toe</header>
+      <div class="titleOfStart">Game mode?</div>
+      <div class="option">
+        <button class="modebtn" id="mode0" onclick="start(this.id, 0)">
+          Tow player
+        </button>
+        <button class="modebtn" id="mode1" onclick="start(this.id, 1)">
+          vs. CPU
+        </button>
+      </div>
+    </div>
+    <!-- game -->
+    <div class="game" id="gameBoard" style="display: none">
+      <div class="title">
+        <div class="top-screen">
+          <div id="turn"><span>X O </span>GAME</div>
+          <button class="btn" onClick="location.reload();">
+            <span class="material-symbols-outlined"> refresh </span>
+          </button>
         </div>
-        <!-- game -->
-        <div class="game" id="gameBoard" style="display: none">
-            <div class="title">
-                <div class="top-screen">
-                    <div id="turn"><span>X O </span>GAME</div>
-                    <button class="btn" onClick="location.reload();">
-                        <span class="material-symbols-outlined"> refresh </span>
-                    </button>
-                </div>
-            </div>
-            <div class="square" id="item1" onclick="game(this.id)"></div>
-            <div class="square" id="item2" onclick="game(this.id)"></div>
-            <div class="square" id="item3" onclick="game(this.id)"></div>
+      </div>
+      <div class="square" id="item1" onclick="game(this.id)"></div>
+      <div class="square" id="item2" onclick="game(this.id)"></div>
+      <div class="square" id="item3" onclick="game(this.id)"></div>
 
-            <div class="square" id="item4" onclick="game(this.id)"></div>
-            <div class="square" id="item5" onclick="game(this.id)"></div>
-            <div class="square" id="item6" onclick="game(this.id)"></div>
+      <div class="square" id="item4" onclick="game(this.id)"></div>
+      <div class="square" id="item5" onclick="game(this.id)"></div>
+      <div class="square" id="item6" onclick="game(this.id)"></div>
 
-            <div class="square" id="item7" onclick="game(this.id)"></div>
-            <div class="square" id="item8" onclick="game(this.id)"></div>
-            <div class="square" id="item9" onclick="game(this.id)"></div>
-        </div>
-        <!-- end -->
-        <div class="endScreen" id="endScreen" style="display: none">
-            <div id="status"></div>
-        </div>
+      <div class="square" id="item7" onclick="game(this.id)"></div>
+      <div class="square" id="item8" onclick="game(this.id)"></div>
+      <div class="square" id="item9" onclick="game(this.id)"></div>
+    </div>
+    <!-- end -->
+    <div class="endScreen" id="endScreen" style="display: none">
+      <div id="status"></div>
+    </div>
 
-        <script src="XO.js"></script>
-    </body>
+    <script src="main.js"></script>
+  </body>
 </html>
