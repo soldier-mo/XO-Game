@@ -14,44 +14,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- start -->
-    <div class="selection-box" id="startScreen">
-      <header>Tic Tac Toe</header>
-      <div class="titleOfStart">Game mode?</div>
-      <div class="option">
-        <button class="modeBtn" id="mode0" onclick="start(this.id, 0)">
-          Tow player
-        </button>
-        <button class="modeBtn" id="mode1" onclick="start(this.id, 1)">
-          vs. CPU
-        </button>
+    <div class="container">
+      <!-- start -->
+      <div class="selection-box" id="startScreen">
+        <header>Tic Tac Toe</header>
+        <div class="titleOfStart">Game mode?</div>
+        <div class="option">
+          <button class="modeBtn" id="mode0" onclick="startGame(0)">
+            Two Player
+          </button>
+          <button class="modeBtn" id="mode1" onclick="startGame(1)">
+            vs. CPU
+          </button>
+        </div>
       </div>
-    </div>
-    <!-- game -->
-    <div class="game" id="gameBoard" style="display: none">
-      <div class="title">
+
+      <!-- game -->
+      <div class="game" id="gameBoard" style="display: none">
         <div class="top-screen">
-          <div id="turn"><span>X O </span>GAME</div>
+          <div id="turn">X O GAME</div>
           <button class="btn" onClick="location.reload();">
             <span class="material-symbols-outlined"> refresh </span>
           </button>
         </div>
+        <div class="board">
+          <!-- Dynamically create squares in JS -->
+          <div class="square" id="item1" onclick="gameTurn(1)"></div>
+          <div class="square" id="item2" onclick="gameTurn(2)"></div>
+          <div class="square" id="item3" onclick="gameTurn(3)"></div>
+          <div class="square" id="item4" onclick="gameTurn(4)"></div>
+          <div class="square" id="item5" onclick="gameTurn(5)"></div>
+          <div class="square" id="item6" onclick="gameTurn(6)"></div>
+          <div class="square" id="item7" onclick="gameTurn(7)"></div>
+          <div class="square" id="item8" onclick="gameTurn(8)"></div>
+          <div class="square" id="item9" onclick="gameTurn(9)"></div>
+        </div>
       </div>
-      <div class="square" id="item1" onclick="game(this.id)"></div>
-      <div class="square" id="item2" onclick="game(this.id)"></div>
-      <div class="square" id="item3" onclick="game(this.id)"></div>
 
-      <div class="square" id="item4" onclick="game(this.id)"></div>
-      <div class="square" id="item5" onclick="game(this.id)"></div>
-      <div class="square" id="item6" onclick="game(this.id)"></div>
-
-      <div class="square" id="item7" onclick="game(this.id)"></div>
-      <div class="square" id="item8" onclick="game(this.id)"></div>
-      <div class="square" id="item9" onclick="game(this.id)"></div>
-    </div>
-    <!-- end -->
-    <div class="endScreen" id="endScreen" style="display: none">
-      <div id="status"></div>
+      <!-- end -->
+      <div class="endScreen" id="endScreen" style="display: none">
+        <div id="status"></div>
+      </div>
     </div>
 
     <script src="main.js"></script>
